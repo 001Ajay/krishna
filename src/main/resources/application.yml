@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  context-path: /krishna
+
+security:
+  basic:
+    enabled: false
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+management:
+  security:
+    enabled: false
+
