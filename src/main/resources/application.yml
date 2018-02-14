@@ -22,7 +22,7 @@ management:
 logging:
   level:
     root: DEBUG
-	
+
 ---
 spring:
   profiles: production
