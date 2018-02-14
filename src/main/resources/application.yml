@@ -1,3 +1,7 @@
+---
+spring:
+  profiles: development
+	
 server:
   port: 8080
   context-path: /krishna
@@ -14,6 +18,18 @@ spring:
 management:
   security:
     enabled: false
+	
 logging:
-  level: error
+  level:
+    root: DEBUG
+	
+---
+spring:
+  profiles: production
+
+logging:
+  path: /tmp/
+  file: BookWorm.log
+  level:
+    root: WARN
 
