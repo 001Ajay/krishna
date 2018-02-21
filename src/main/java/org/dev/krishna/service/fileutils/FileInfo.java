@@ -5,7 +5,7 @@ import lombok.*;
 
 @Builder
 @ToString
-@Getter
+@Data
 public class FileInfo {
     private String name;
     private String extension;

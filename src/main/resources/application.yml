@@ -1,7 +1,3 @@
----
-spring:
-  profiles: development
-
 server:
   port: 8080
   context-path: /krishna
@@ -9,27 +5,7 @@ server:
 security:
   basic:
     enabled: false
-spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/pages/
-      suffix: .jsp
 
 management:
   security:
     enabled: false
-
-logging:
-  level:
-    root: DEBUG
-
----
-spring:
-  profiles: production
-
-logging:
-  path: /tmp/
-  file: BookWorm.log
-  level:
-    root: WARN
-

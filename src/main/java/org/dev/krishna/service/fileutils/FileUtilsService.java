@@ -54,6 +54,9 @@ public class FileUtilsService {
                     try {
                         if(checkDuplicate(file1, file2)){
                             info.add(new Pair(file1,file2));
+//                            info.forEach(pair -> {
+//                                if(!pair.getLeft().equals(file2) && !pair.getRight().equals(file1))
+//                            });
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
