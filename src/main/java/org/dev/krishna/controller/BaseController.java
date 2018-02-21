@@ -1,4 +1,4 @@
-package org.dev.krishna;
+package org.dev.krishna.controller;
 
 
 import org.dev.krishna.service.fileutils.FileInfo;
@@ -17,8 +17,8 @@ import java.util.List;
 
 // http://localhost:8080/krishna/actuator
 
-@Controller
-@RequestMapping("/")
+//@Controller
+//@RequestMapping("/krishna")
 public class BaseController {
 
     @Autowired
@@ -35,7 +35,6 @@ public class BaseController {
         return fileUtilsService.scanDirectory(location);
     }
 
-
     /**
      * This webservices searches for duplicate file inside a specific location.
      * It compares extension, file size and then file content using byte stream
@@ -47,8 +46,8 @@ public class BaseController {
      */
     @RequestMapping(value = "/checkDuplicates", method = RequestMethod.GET)
     public @ResponseBody List<Pair> checkCopy()throws Exception{
-        String location = "C:\\Users\\Ajay\\.m2\\repository\\org\\projectlombok\\lombok\\1.16.20";
+        //String location = "C:\\Users\\Ajay\\.m2\\repository\\org\\projectlombok\\lombok\\1.16.20";
+        String location = "C:\\Users\\Ajay\\Downloads";
         return fileUtilsService.checkDuplicatesInFolder(location);
     }
-
 }

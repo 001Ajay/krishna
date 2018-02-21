@@ -61,13 +61,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.7.1</version>
-		</dependency>
-		-->
+		<!--<dependency>-->
+			<!--<groupId>org.codehaus.jackson</groupId>-->
+			<!--<artifactId>jackson-mapper-asl</artifactId>-->
+			<!--<version>1.7.1</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
@@ -83,6 +81,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>
