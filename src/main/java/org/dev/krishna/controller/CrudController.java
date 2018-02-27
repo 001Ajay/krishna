@@ -11,6 +11,7 @@ import java.util.Optional;
 public abstract class CrudController<T> {
 
     protected abstract CrudService<T> getService();
+    protected abstract T preAddHook(T t);
 
     @GetMapping("/list")
     public @ResponseBody
@@ -34,7 +35,7 @@ public abstract class CrudController<T> {
     @PostMapping("/add")
     public @ResponseBody ResponseEntity add(@RequestBody T t){
         try {
-            getService().add(t);
+            getService().add(preAddHook(t));
             return success("Added succesfully");
         } catch (Exception e) {
             e.printStackTrace();
