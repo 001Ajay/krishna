@@ -15,6 +15,6 @@ public class Transaction {
     private String fromAccountId;
     private String toAccountId;
     private BigDecimal amount;
-    private String time;
     private String details;
+    private String time;
 }
