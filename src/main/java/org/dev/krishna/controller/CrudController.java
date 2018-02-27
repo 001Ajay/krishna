@@ -20,8 +20,7 @@ public abstract class CrudController<T> {
     }
 
     @GetMapping("/find/{id}")
-    public @ResponseBody
-    T find(@PathVariable String id) throws Exception {
+    public @ResponseBody T find(@PathVariable String id) throws Exception {
         try {
             Optional<T> elem = getService().find(id);
             if(elem.isPresent()) return elem.get();
@@ -44,8 +43,7 @@ public abstract class CrudController<T> {
     }
 
     @PostMapping("/update")
-    public @ResponseBody
-    ResponseEntity update(@RequestBody T t){
+    public @ResponseBody ResponseEntity update(@RequestBody T t){
         try {
             getService().update(t);
             return success("Updated succesfully");
@@ -56,8 +54,7 @@ public abstract class CrudController<T> {
     }
 
     @PostMapping("/delete/{id}")
-    public @ResponseBody
-    ResponseEntity delete(@PathVariable String id){
+    public @ResponseBody ResponseEntity delete(@PathVariable String id){
         try {
             getService().delete(id);
             return success("Deleted succesfully");
