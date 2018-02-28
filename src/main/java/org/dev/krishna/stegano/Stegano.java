@@ -1,4 +1,4 @@
-package com.spring1.stegano;
+package org.dev.krishna.stegano;
 
 import java.awt.image.BufferedImage;
 
