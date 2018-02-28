@@ -1,0 +1,3 @@
+______________________________________
+stegano.jar - hide image within image. To open just double click (Java must be installed in the system)
+______________________________________
