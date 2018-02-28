@@ -1,0 +1,25 @@
+{"id":"AC1519221004303","type":"R","name":"Cash"}
+{"id":"AC1519221004311","type":"R","name":"Assets"}
+{"id":"AC1519221004312","type":"R","name":"Equities"}
+{"id":"AC1519221004314","type":"R","name":"Mutual Funds"}
+{"id":"AC1519221004316","type":"R","name":"Providend Fund"}
+{"id":"AC1519221004317","type":"R","name":"Loan"}
+{"id":"AC1519221004319","type":"P","name":"Company"}
+{"id":"AC1519221004320","type":"P","name":"SBI"}
+{"id":"AC1519221004322","type":"P","name":"Axis"}
+{"id":"AC1519221004323","type":"P","name":"ING"}
+{"id":"AC1519221004324","type":"P","name":"Forex"}
+{"id":"AC1519221004325","type":"P","name":"Telephone Bill"}
+{"id":"AC1519221004326","type":"P","name":"Internet Bill"}
+{"id":"AC1519221004327","type":"P","name":"Electricity Bill"}
+{"id":"AC1519221004328","type":"P","name":"Debtor"}
+{"id":"AC1519221004330","type":"P","name":"Creditor"}
+{"id":"AC1519221004332","type":"N","name":"Profit/Loss"}
+{"id":"AC1519221004333","type":"N","name":"Interest Received"}
+{"id":"AC1519221004336","type":"N","name":"Interest Paid"}
+{"id":"AC1519221004338","type":"N","name":"Salary"}
+
+
+{"id":"","fromAccountId":"Forex","toAccountId":"Cash","amount":"1000","details":"Withdrawal","time":""}
+{"id":"","fromAccountId":"Salary","toAccountId":"ING","amount":"3700","details":"Salary for January","time":""}
+{"id":"","fromAccountId":"ING","toAccountId":"Cash","amount":"250","details":"Withdrawal","time":""}

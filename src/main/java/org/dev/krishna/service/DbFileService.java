@@ -4,10 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +19,7 @@ public abstract class DbFileService<T>{
 
     protected abstract DB_FILE dBFileType();
     protected abstract Class<T> getFileTypeClass();
-    protected abstract String getId();
+    public abstract String getId();
 
     private Path dbFilePathInstance;
     private BufferedReader bufferedReader;
@@ -67,10 +64,13 @@ public abstract class DbFileService<T>{
     }
 
     public String add(T object) throws Exception {
-        openFileToWrite();
-        String string = createString(object);
-        bufferedWriter.write(string+"\n");
-        closeFileAfterWrite();
+        try(FileWriter fw = new FileWriter(dBFileType().getFile(), APPEND_TO_FILE);
+            BufferedWriter bufferedWriter = new BufferedWriter(fw)){
+            String content = createString(object);
+            bufferedWriter.write(content+"\n");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return null;
     }
 
