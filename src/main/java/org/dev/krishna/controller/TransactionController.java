@@ -1,5 +1,6 @@
 package org.dev.krishna.controller;
 
+import org.dev.krishna.model.ResponseEntity;
 import org.dev.krishna.model.Transaction;
 import org.dev.krishna.service.AccountService;
 import org.dev.krishna.service.CrudService;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/transaction")
@@ -33,7 +37,8 @@ public class TransactionController extends CrudController<Transaction>{
     }
 
     @PostMapping("/addEntries")
-    public @ResponseBody ResponseEntity addEntries(@RequestBody List<Transaction> transactions){
+    public @ResponseBody
+    ResponseEntity addEntries(@RequestBody List<Transaction> transactions){
         transactions.forEach(txn -> {
             Optional<String> fromAccountId = accountService.findIdByName(txn.getFromAccountId());
             if(fromAccountId.isPresent()) txn.setFromAccountId(fromAccountId.get());

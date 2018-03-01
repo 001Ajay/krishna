@@ -18,7 +18,7 @@ public class TransactionService extends DbFileService<Transaction> implements Cr
     }
 
     @Override
-    protected String getId() {
-        return "T"+System.currentTimeMillis();
+    public String getId() {
+        return "TX"+System.currentTimeMillis();
     }
 }
